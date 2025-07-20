@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery - MNE Components India Pvt Ltd</title>
+    <link rel="icon" type="image/svg+xml" href="mne-favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f5f7fa] text-[#222f3e]">
+    <!-- Navigation (reuse from index.html) -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-12 w-auto" src="mne-logo.svg" alt="MNE Components Logo">
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html#home" class="nav-link text-[#2c3e50] hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                        <a href="index.html#about" class="nav-link text-[#7f8c8d] hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
+                        <a href="index.html#products" class="nav-link text-[#7f8c8d] hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Products</a>
+                        <a href="index.html#services" class="nav-link text-[#7f8c8d] hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Services</a>
+                        <a href="index.html#quality" class="nav-link text-[#7f8c8d] hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Quality</a>
+                        <a href="index.html#contact" class="nav-link text-[#7f8c8d] hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <button class="bg-accent hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get a Quote</button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#home" class="nav-link text-[#2c3e50] hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html#about" class="nav-link text-[#7f8c8d] hover:text-accent block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html#products" class="nav-link text-[#7f8c8d] hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Products</a>
+                <a href="index.html#services" class="nav-link text-[#7f8c8d] hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="index.html#quality" class="nav-link text-[#7f8c8d] hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Quality</a>
+                <a href="index.html#contact" class="nav-link text-[#7f8c8d] hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-200">
+                <div class="flex items-center px-4">
+                    <button class="bg-accent hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium w-full transition duration-300">Get a Quote</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="w-full flex justify-start p-4">
+        <a href="index.html#home" class="bg-accent hover:bg-red-700 text-white px-5 py-2 rounded-md text-base font-medium transition duration-300 flex items-center"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+    </div>
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Product <span class="text-accent">Gallery</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore our complete range of battery components and solutions.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606229365485-93a3b8ee0385?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Battery Terminal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Battery Terminals</h3>
+                        <p class="text-gray-600 mb-4">Premium quality battery terminals with superior conductivity and corrosion resistance.</p>
+                        <button class="text-accent hover:text-red-700 font-medium">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606229365485-93a3b8ee0385?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Battery Connector" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Battery Connectors</h3>
+                        <p class="text-gray-600 mb-4">High-performance connectors ensuring secure and efficient power transmission.</p>
+                        <button class="text-accent hover:text-red-700 font-medium">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606229365485-93a3b8ee0385?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" alt="Custom Solutions" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Custom Solutions</h3>
+                        <p class="text-gray-600 mb-4">Tailored battery connection components designed to your exact specifications.</p>
+                        <button class="text-accent hover:text-red-700 font-medium">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581093057302-1fe7c1b9b9b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Laser Weld Products" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Laser Weld Products</h3>
+                        <p class="text-gray-600 mb-4">Advanced laser weld solutions for high-reliability battery connections.</p>
+                        <button class="text-accent hover:text-red-700 font-medium">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-aa1f3c4a4f5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Stamped Products" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Stamped Products</h3>
+                        <p class="text-gray-600 mb-4">Precision stamped components for automotive and industrial applications.</p>
+                        <button class="text-accent hover:text-red-700 font-medium">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Industrial Components" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Industrial Components</h3>
+                        <p class="text-gray-600 mb-4">Robust components engineered for demanding industrial environments.</p>
+                        <button class="text-accent hover:text-red-700 font-medium">Get a Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/150x50?text=MNE+Logo" alt="MNE Components Logo" class="h-10 mb-4">
+                    <p class="text-gray-400 mb-4">Leading manufacturer of battery connectors and terminals in India since 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="index.html#products" class="text-gray-400 hover:text-white transition duration-300">Products</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="index.html#quality" class="text-gray-400 hover:text-white transition duration-300">Quality</a></li>
+                        <li><a href="index.html#careers" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Battery Terminals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Battery Connectors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Custom Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Automotive Components</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Industrial Components</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-accent hover:bg-red-700 px-4 py-2 rounded-r-md transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 MNE Components India Pvt Ltd. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

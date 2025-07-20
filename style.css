@@ -1,0 +1,182 @@
+/* Modern, clean, professional, and mobile-friendly styles for MNE Components */
+:root {
+  --primary: #2c3e50;
+  --secondary: #7f8c8d;
+  --accent: #e74c3c;
+  --background: #f5f7fa;
+  --background-dark: #e9ecef;
+  --text-main: #222f3e;
+  --text-light: #6c757d;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--background);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(44,62,80,0.05);
+}
+
+.nav-link, nav a {
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-link::after, nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after, nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #e74c3c, #3498db);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+.product-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.12);
+}
+
+.bg-accent {
+  background: var(--accent) !important;
+}
+.text-accent {
+  color: var(--accent) !important;
+}
+
+section {
+  background: var(--background-dark);
+}
+section.bg-white {
+  background: var(--white) !important;
+}
+section.bg-gray-900 {
+  background: #23272f !important;
+}
+
+footer {
+  background: #23272f;
+  color: var(--white);
+}
+footer a {
+  color: #b0b8c1;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: var(--accent);
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+input, textarea {
+  background: var(--white);
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-main);
+  transition: border 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  background: var(--accent);
+  color: var(--white);
+  transition: background 0.2s, transform 0.2s;
+}
+button:hover {
+  background: #c0392b;
+  transform: scale(1.04);
+}
+
+/* Remove any custom nav responsive overrides that conflict with Tailwind */
+/* (No .md\:hidden or .hidden.md\:flex custom rules should exist) */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0 !important;
+    text-align: center;
+  }
+  .product-card {
+    margin-bottom: 2rem;
+  }
+  .grid-cols-2, .grid-cols-3, .lg\:grid-cols-2, .lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(.4,0,.2,1);
+}
+.slide-up.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scale-in {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: all 0.8s cubic-bezier(.4,0,.2,1);
+}
+.scale-in.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-5deg);
+  transition: all 0.8s cubic-bezier(.4,0,.2,1);
+}
+.rotate-in.animated {
+  opacity: 1;
+  transform: rotate(0);
+}
